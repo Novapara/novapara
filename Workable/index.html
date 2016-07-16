@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" type="text/CSS" href="main_style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="My First Website">
+    <meta name="keywords" content="Portfolio,Web Design,Relevant Keywords">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Pacifico' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body class='  wsite-theme-light'>
+    <div class="bar"></div>
+	<div class="navbg"></div>
+	<div class="nav">
+	
+	<center><ul>
+        <li><a href="http://mw.micronation.org/wiki/Novapara" title="Novapara's wiki" target="_blank">Wiki</a></li>
+        <li><a href="http://novapara.boards.net/" title="National forums" target="_blank">Forum</a></li>
+        <li><a href="/diplomacy.html" target="_blank">Diplomacy</a></li>
+		<li><a href="/contact.html" target="_blank">Contact</a></li>
+      </ul></center>
+	
+	</div>
+    <div class="container">
+
+      <img src="http://i.imgur.com/D5VFHqR.png" alt="Lune Flag of Novapara" />
+	  
+	</div>
+	<div class="text">
+      
+      <center><h1>Novapara</h1>
+      
+      <h2>A Constitutional Island Principality</h2></center>
+
+      <p>The <strong>Principality of Novapara</strong>, a Pacific Northwestern American micronation. We are a micronational design and tech center. Located on Whidbey Island we also boast a mild agracultural development, in effort to support self sustainiblity and environmenal friendly practices.</p>
+<p>Founded January 22nd, '16, we current govern under a Constitutional Monarchy style government.</p>
+
+	
+	
+	<div class="stack" style="margin-top: 200px; font-size: 10px;">
+	  <center>
+	  <p>Novapara's website is hosted by<br /><a href="https://www.weebly.com/" target="_blank"><img style="width: 120px; padding: 10px;" src="https://worldvectorlogo.com/logos/weebly.svg"></a> <br /> an amazing free web host. Many Thanks!</p>
+	  <p><strong>All content is &copy; 2016 the Principality of Novapara</strong></p>
+	  </center>
+	</div>
+  
+</div>
+	
+  <div class="conbanner">
+	<div class="available">Website under construction</div>
+	</div>
+	
+<div class="search">
+  <form name="jksearch" action="http://www.google.com/search" method="get" onSubmit="jksitesearch(this)">
+
+<input id="hiddenquery" type="hidden" name="q" />
+<input  name="qfront" type="text" onclick="this.focus();this.select()" placeholder="Enter here..." /> <input type="submit" value="Search" /><br />
+<div class="radio">
+	
+  <ul class="radio">
+  <li>
+    <input type="radio" id="a-option" name="se">
+    <label for="a-option">Google</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="b-option" name="se">
+    <label for="b-option">Yahoo</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="c-option" name="se">
+    <label for="c-option">MSN</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+</ul>
+</div>
+
+<script type="text/javascript">
+
+// All-in-one Internal Site Search script- By JavaScriptKit.com (http://www.javascriptkit.com)
+// For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
+// This notice must stay intact for use
+
+//Enter domain of site to search.
+var domainroot="www.novapara.weebly.com"
+
+var searchaction=[ //form action for the 3 search engines
+"http://www.google.com/search",
+]
+
+var queryfieldname=["q","p","q"] //name of hidden query form for the 3 search engines
+
+function switchaction(cur, index){
+cur.form.action=searchaction[index]
+document.getElementById("hiddenquery").name=queryfieldname[index]
+}
+
+function jksitesearch(curobj){
+for (i=0; i< document.jksearch.se.length; i++){ //loop through radio to see which is checked
+if (document.jksearch.se[i].checked==true)
+switchaction(document.jksearch.se[i], i)
+}
+document.getElementById("hiddenquery").value="site:"+domainroot+" "+curobj.qfront.value
+}
+</script>
+
+<div class="map">
+
+  <ul>
+  <a href="/index.html"><li>Home</li></a>
+  <a href="/politics.html"><li>Politics</li></a>
+  <a href="/economy.html"><li>Economy</li></a>
+  <a href="/geography.html"><li>Geography</li></a>
+  <a href="/culture.html"><li>Culture</li></a>
+  <a href="/citizenship.html"><li>Citizenship</li></a>
+  <a href="/contact.html"><li>Contact</li></a><br />
+  <a href="/departments.html"><li>Departments</li><a/>
+  <a href="/library.html"><li>Library</li></a>
+  </ul>
+
+</div>
+
+<div class="box">
+
+    </div>
+    <div id="popup1" class="overlay">
+    	<div class="popup" >
+    		<h2>Construction</h2>
+    		<a class="close" href="#popup1">×</a>
+    		<div class="content">
+    			Our website is currently under construction. Current content is not official. Apologies for the inconvenience.
+    		</div>
+    	</div>
+    </div>
+	
+  <div style='display:none'>{title}</div>
+<div style='display:none'>{menu}</div>
+<div style='display:none'>{content}</div>
+
+<div style='padding: 20px; width:100%; text-align:center;'>{footer}</div>
+</body>
+</html>

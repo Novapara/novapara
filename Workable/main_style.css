@@ -1,0 +1,517 @@
+/* Resets */
+html, body, ul, li, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Declares font family, text colour and adds a subtle pattern to the background */
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #2c3e50;
+  background-color: #d4d4d4;
+  /* background-image: url('img/texture.png'); */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.bar {
+  position: absolute;
+  top:0%;
+  left:0%;
+  width:100%;
+  height:40%;
+  background-color: #4c6a70;
+  background-image: url('http://i.imgur.com/OstKIkw.png');
+  background-size: cover;
+  background-position: center bottom;
+  z-index:-99;
+  border-bottom: 20px #021323 solid;
+}
+/* Make container centered in page and center text inside <div> */
+.container {
+  position: absolute;
+  top:55%;
+  left:50%;
+  width:400px;  
+  margin: -220px 0 0 -200px;  
+  text-align: center;
+}
+.text {
+  position: absolute;
+  top:100%;
+  left:50%;
+  width:400px;
+  padding: 20px;
+  margin: -200px 0 0 -220px;
+  margin-bottom: 100px;
+  text-align: left;
+}
+.stack {
+  margin-bottom: 100px;
+  text-align: left;
+  padding:20px;
+}
+.navbg {
+  background: #000;
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  width: 300px;
+  height: 44px;
+  border-radius: 3px;
+  top: 5%;
+  right: 5%;
+  position: absolute;
+}
+.nav {
+  width: 300px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 3px;
+  top: 5%;
+  right: 5%;
+  position: absolute;
+}
+.search {
+  width: 500px;
+  top: 20%;
+  right: 5%;
+  text-align: right;
+  position: absolute;
+}
+.conbanner {
+  width: 400px;
+  top: 5%;
+  left: 5%;
+  text-align:left;
+  position: fixed;
+}
+
+/* Makes image a circle and sizes it to 40% of the outside container */
+.container img { 
+  max-width: 80%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.container:hover img {
+  margin: 20px;
+  max-width: 90%;
+  border-radius: 10px;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:3.0s;
+	-webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-iteration-count: infinite;
+
+}
+
+.search input[type=button], input[type=submit], input[type=reset] {
+    background-color: #09253f;
+    border: none;
+    color: white;
+    padding: 10px;
+	font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.search input[type=text] {
+    background-color: #2ecc71;
+    border: 3px #2ecc71 solid;
+    color: #fff;
+    padding: 7px;
+	font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    margin: 4px 2px;
+	width: 100px;
+	border-radius: 3px;
+      -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	z-index: 2;
+}
+.search input[type=text]:focus {
+    width: 175px;	
+    outline:none;
+	
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+    opacity:  0.5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  0.5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  0.5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+
+a.icon {
+    height: 150px;
+	width: 150px;
+    border: 7px solid #f6f6f6;  
+	padding: 0px;
+	background: #fff;
+	font-family: 'Quicksand' san-serif;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 150px;
+	text-align: center;
+	color: #000;
+	margin: 10px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+a.icon:hover {
+    background: #000;
+	color: #858585;
+	border-color: #191919;
+}
+
+/* SEARCH FUNCTION STARTS HERE - TAMPLATE BY https://codepen.io/AngelaVelasquez/pen/Eypnq */
+
+
+
+  @import url('http://fonts.googleapis.com/css?family=Lato');
+
+
+.radio {
+  display: block;
+  position: absolute;
+  margin: auto;
+  height: 25px;
+  width: 250px;
+  right: -10px;
+  margin-top: 0px;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.radio ul{
+  list-style: none;
+  height: 25px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.radio ul li{
+  color: #AAAAAA;
+  display: block;
+  position: relative;
+  float: left;
+  height: 25px;
+}
+
+.radio ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.radio ul li label{
+  display: inline-block;
+  position: relative;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 0px 0px 0px 40px;
+  margin: 10px auto;
+  margin-top: 0px;
+  height: 25px;
+  line-height: 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+.radio ul li:hover label{
+	color: #FFFFFF;
+}
+
+.radio ul li .check{
+  display: inline-block;
+  position: absolute;
+  border: 3px solid #AAAAAA;
+  border-radius: 100%;
+  height: 5px;
+  width: 5px;
+  top: 7px;
+  left: 20px;
+	z-index: 5;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+.radio ul li:hover .check {
+  border: 3px solid #FFFFFF;
+}
+
+.radio ul li .check::before {
+  display: inline-block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 3px;
+  width: 3px;
+  top: 1px;
+	left: 1px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+.radio input[type=radio]:checked ~ .check {
+  border: 3px solid #2ecc71;
+}
+
+.radio input[type=radio]:checked ~ .check::before{
+  background: #2ecc71;
+}
+
+.radio input[type=radio]:checked ~ label{
+  color: #2ecc71;
+}
+
+
+
+/*SEARCH ENDS HERE */
+
+
+/* Clears bullet points and places <li> items next to each other instead of stacked on top and changes font */
+.nav li {
+  display: inline;
+  list-style: none;
+  padding: 0 4px;
+  font-family: 'Pacifico', monospace;
+}
+
+
+/* Remove default hyperlink styling, add our own colours and change font-size*/
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+.nav a, .nav a:visited {
+  color:#eac134;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* This changes the link colour when someone hovers their mouse over it */
+.nav a:hover {
+  color: #fff;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:1.0s;
+}
+
+/* Style our header tags */
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 10px 0 0;
+  font-family: 'Pacifico', monospace;
+  color: #2c3e50;
+}
+
+h1:hover {
+  color: #0a5074;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:2.0s;
+}
+
+h2 {
+  font-size: 22px;
+  color: #67809F;
+  font-family: 'Lora', serif;
+}
+
+h2:hover {
+  color: #2ecc71;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:1.0s;
+}
+
+/* Adds some space around our bio */
+p {
+  padding: 20px 0;
+}
+
+
+/* Style our 'available' and 'unavailable' classes */
+.available, .unavailable {
+  width: 60%;
+  margin:0;
+  border-radius: 3px;
+  padding: 14px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.available {
+  color: #fff;
+  background-color: #2ecc71;
+}
+
+.available:hover {
+  background-color: #000000;
+  color: #2ecc71;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:2.0s;
+}
+.unavailable {
+  color: #999;
+  background-color: #eee;
+}
+
+/* Navigation */
+
+.map {
+  background: #000;
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  top: 23%;
+  left: 7%;
+  width: 150px;
+  padding: 5px;
+  position: fixed;
+}
+
+.map ul {
+  list-style: none;
+}
+.map li {
+  font-size: 11px;
+  color: #fff;
+  padding: 2px;
+  margin: 3px;
+  border: 1px solid #fff;  
+  text-align: center;
+  text-transform: uppercase;
+}
+.map a {
+  font-size: 11px;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+}
+.map li:hover {
+  border-color: #6ee1af;
+}
+.map a:hover {
+  color: #6ee1af;
+}
+
+
+/* POP UP */
+
+.box  {
+  width: 20%;
+  margin: 0 auto;
+  background: none;
+  padding: 35px;
+  border: 0px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+  overflow: auto;
+          }
+          .button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid orange;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+          }
+          .button:hover {
+  background: orange;
+          }
+          .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+          }
+          .overlay:target {
+  visibility: hidden;
+  opacity: 0;
+  display:none
+          }
+          .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+			text-align: center;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+          }
+          .popup h2 {
+            margin-top: 0;
+            color: #333;
+			text-align: center;
+            font-family: 'Pacifico', monospace;
+          }
+          .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+          }
+          .popup .close:hover {
+            color: orange;
+          }
+          .popup .content {
+            max-height: 30%;
+            overflow: auto;
+          }
+@media all and (max-width: 480px) {
+  .available {
+    width: 0%;
+  }
+  .search {
+  width: 0%;
+  overflow: hidden;
+  }
+}

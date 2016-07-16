@@ -1,0 +1,357 @@
+/* Resets */
+html, body, ul, li, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Declares font family, text colour and adds a subtle pattern to the background */
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #2c3e50;
+  background-color: #fbfbfb;
+  /* background-image: url('img/texture.png'); */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.bar {
+  position: absolute;
+  top:0%;
+  left:0%;
+  width:100%;
+  height:40%;
+  background-color: #4c6a70;
+  background-image: url('http://i.imgur.com/OstKIkw.png');
+  background-size: cover;
+  background-position: center bottom;
+  z-index:-99;
+  border-bottom: 20px #021323 solid;
+}
+/* Make container centered in page and center text inside <div> */
+.container {
+  position: absolute;
+  top:55%;
+  left:50%;
+  width:400px;  
+  margin: -220px 0 0 -200px;  
+  text-align: center;
+}
+.text {
+  position: absolute;
+  top:10%;
+  left:50%;
+  width:400px;
+  padding: 20px;
+  margin: -200px 0 0 -220px;
+  margin-top: 0px;
+  margin-bottom: 100px;
+  text-align: left;
+  background: #c4c4c4;
+  border-bottom: 7px #4c6a70 solid;
+}
+.stack {
+  margin-bottom: 100px;
+  text-align: left;
+  padding:20px;
+}
+.nav {
+  background: #e8e8e8;
+  width: 241px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 3px;
+  top: 5%;
+  right: 5%;
+  position: absolute;
+}
+.search {
+  width: 500px;
+  top: 20%;
+  right: 5%;
+  text-align: right;
+  position: absolute;
+}
+.conbanner {
+  width: 400px;
+  top: 5%;
+  left: 5%;
+  text-align:left;
+  position: absolute;
+}
+
+/* Makes image a circle and sizes it to 40% of the outside container */
+.container img { 
+  max-width: 80%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.container:hover img {
+  margin: 20px;
+  max-width: 90%;
+  border-radius: 10px;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:3.0s;
+	-webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-iteration-count: infinite;
+
+}
+
+.search input[type=button], input[type=submit], input[type=reset] {
+    background-color: #09253f;
+    border: none;
+    color: white;
+    padding: 10px;
+	font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.search input[type=text] {
+    background-color: #2ecc71;
+    border: 3px #2ecc71 solid;
+    color: #fff;
+    padding: 7px;
+	font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    margin: 4px 2px;
+	width: 100px;
+	border-radius: 3px;
+      -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	z-index: 2;
+}
+.search input[type=text]:focus {
+    width: 175px;
+}
+
+
+
+/* SEARCH FUNCTION STARTS HERE - TAMPLATE BY https://codepen.io/AngelaVelasquez/pen/Eypnq */
+
+
+
+  @import url('http://fonts.googleapis.com/css?family=Lato');
+
+
+.radio {
+  display: block;
+  position: absolute;
+  margin: auto;
+  height: 25px;
+  width: 250px;
+  right: -10px;
+  margin-top: 0px;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.radio ul{
+  list-style: none;
+  height: 25px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.radio ul li{
+  color: #AAAAAA;
+  display: block;
+  position: relative;
+  float: left;
+  height: 25px;
+}
+
+.radio ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.radio ul li label{
+  display: inline-block;
+  position: relative;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 0px 0px 0px 40px;
+  margin: 10px auto;
+  margin-top: 0px;
+  height: 25px;
+  line-height: 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+.radio ul li:hover label{
+	color: #FFFFFF;
+}
+
+.radio ul li .check{
+  display: inline-block;
+  position: absolute;
+  border: 3px solid #AAAAAA;
+  border-radius: 100%;
+  height: 5px;
+  width: 5px;
+  top: 7px;
+  left: 20px;
+	z-index: 5;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+.radio ul li:hover .check {
+  border: 3px solid #FFFFFF;
+}
+
+.radio ul li .check::before {
+  display: inline-block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 3px;
+  width: 3px;
+  top: 1px;
+	left: 1px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+.radio input[type=radio]:checked ~ .check {
+  border: 3px solid #2ecc71;
+}
+
+.radio input[type=radio]:checked ~ .check::before{
+  background: #2ecc71;
+}
+
+.radio input[type=radio]:checked ~ label{
+  color: #2ecc71;
+}
+
+
+
+/*SEARCH ENDS HERE */
+
+
+/* Clears bullet points and places <li> items next to each other instead of stacked on top and changes font */
+.nav li {
+  display: inline;
+  list-style: none;
+  padding: 0 4px;
+  font-family: 'Pacifico', monospace;
+}
+
+
+/* Remove default hyperlink styling, add our own colours and change font-size*/
+a, a:visited {
+  color:#000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* This changes the link colour when someone hovers their mouse over it */
+a:hover {
+  color: #fff;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:1.0s;
+}
+
+/* Style our header tags */
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 10px 0 0;
+  font-family: 'Pacifico', monospace;
+  color: #2c3e50;
+}
+
+h1:hover {
+  color: #0a5074;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:2.0s;
+}
+
+h2 {
+  font-size: 22px;
+  color: #67809F;
+  font-family: 'Lora', serif;
+}
+
+h2:hover {
+  color: #2ecc71;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:1.0s;
+}
+
+/* Adds some space around our bio */
+p {
+  padding: 20px 0;
+}
+
+
+/* Style our 'available' and 'unavailable' classes */
+.available, .unavailable {
+  width: 60%;
+  margin:0;
+  border-radius: 3px;
+  padding: 14px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.available {
+  color: #fff;
+  background-color: #2ecc71;
+}
+
+.available:hover {
+  background-color: #000000;
+  color: #2ecc71;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;
+    transition:2.0s;
+}
+.unavailable {
+  color: #999;
+  background-color: #eee;
+}
+
+
+
+@media all and (max-width: 480px) {
+  .available {
+    width: 0%;
+  }
+  .search {
+  width: 0%;
+  overflow: hidden;
+  }
+}
